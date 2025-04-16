@@ -1,129 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Science Experiment Hub</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            
-        }
-        nav {
-    background-color: darkgreen;
-    text-align: center;
-    padding: 15px;
-    font-family: Arial, sans-serif;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    margin: 15px;
-    padding: 10px 15px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: lightgreen;
-    color: black;
-}
-
-            
-
-        
-        header {
-            background: #28a745;
-            color: white;
-            padding: 15px 0;
-            font-size: 24px;
-            text-align: center;
-            
-        }
-        .container {
-            
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-top: 20px;
-        }
-        .experiment {
-            margin: 20px 0;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background: #fff;
-        }
-        .experiment h3 {
-            color: #28a745;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Science Hub</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #28a745;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    nav {
+      background: #218838;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 30px 15px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .experiment {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .experiment img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .experiment h2 {
+      color: #28a745;
+    }
+    .details {
+      display: none;
+      text-align: left;
+      margin-top: 10px;
+    }
+    button {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #1e7e34;
+    }
+    form label, form input, form textarea {
+      display: block;
+      margin-bottom: 10px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+    }
+    form input[type="submit"] {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form input[type="submit"]:hover {
+      background: #1e7e34;
+    }
+    #termsSection {
+      display: none;
+      background: #ffffff;
+      border-top: 2px solid #28a745;
+      padding: 20px;
+      color: #333;
+    }
+    #termsSection h2 {
+      color: #28a745;
+    }
+    footer {
+      background: #28a745;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    footer a {
+      color: white;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Science Experiment </h1>
-        <p>Your go-to resource for fun and educational science experiments!</p>
-    </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Experiments</a>
-        
-    </nav>
-    <div class="container">
-        <div class="experiment">
-           <center><h2>Experiment 1: Baking Soda and Vinegar Volcano</h2></center> 
-          
-            <h3>Materials:</h3>
-            <ul>
-                <li>Baking soda</li>
-                <li>Vinegar</li>
-                <li>Container (such as a small bottle or cup)</li>
-                <li>Food coloring (optional)</li>
-            </ul>
-            <h3>Procedure:</h3>
-            <ol>
-                <li>Place the container on a tray to catch spills.</li>
-                <li>Add 2-3 tablespoons of baking soda into the container.</li>
-                <li>Pour in vinegar slowly and watch the eruption happen!</li>
-                <li>If desired, add food coloring to the vinegar for a colorful effect.</li>
-            </ol>
-            <h3>Expected Results:</h3>
-            <p>The mixture of baking soda and vinegar will react to produce carbon dioxide gas, creating a fizzing eruption that looks like a volcano!</p>
-        </div>
 
-        <div class="experiment">
-            <center><h2>Experiment 2: Simple Paper Airplane Flight Test</h2></center>
-            <h3>Materials:</h3>
-            <ul>
-                <li>Paper</li>
-                <li>Ruler (optional, for measuring distance)</li>
-                <li>Timer (optional, for timing flight duration)</li>
-            </ul>
-            <h3>Procedure:</h3>
-            <img src="" alt="">
-            <ol>
-                <li>Take a sheet of paper and fold it in half lengthwise.</li>
-                <li>Unfold and fold each edge to the center crease to form the wings.</li>
-                <li>Test the plane's flight by throwing it and measuring how far or how long it flies.</li>
-                <li>Try adjusting the design of the plane and test again to improve its flight.</li>
-            </ol>
-            <h3>Expected Results:</h3>
-            <p>The plane should glide through the air, and you can experiment with different designs to see which one flies the farthest or stays in the air the longest!</p>
+  <header>
+    <h1>Science Hub</h1>
+  </header>
+
+  <nav>
+    <a onclick="navigateTo('home')">Home</a>
+    <a onclick="navigateTo('experiments')">Science Experiments</a>
+    <a onclick="navigateTo('about')">About Us</a>
+    <a onclick="navigateTo('contact')">Contact Us</a>
+    <a onclick="navigateTo('donation')">Donation</a>
+  </nav>
+
+  <section id="home" class="container">
+    <h2>Welcome to Science Hub!</h2>
+    <p>Explore the exciting world of science through fun and educational experiments. Perfect for students, parents, and teachers looking to make learning interactive and engaging!</p>
+  </section>
+
+  <section id="experiments" class="container">
+    <h2>Science Experiments</h2>
+    <div id="experimentContainer"></div>
+  </section>
+
+  <section id="about" class="container">
+    <h2>About Us</h2>
+    <p>Science Hub is dedicated to sparking curiosity and encouraging scientific discovery among learners of all ages. We provide simple and safe science experiments that can be done at home or in the classroom. Our mission is to make science fun, accessible, and impactful for everyone. Whether you're a student looking to explore, a parent trying to teach, or a teacher seeking ideas—Science Hub is here to help!</p>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>Have a question, suggestion, or just want to say hi? Use the form below to reach out to us!</p>
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <section id="donation" class="container">
+    <h2>Support Science Hub</h2>
+    <p>If you find our content helpful and want to support us, consider making a donation. Your contributions help us create more educational resources and reach more curious minds!</p>
+    <button onclick="alert('Thank you for considering a donation! This feature is coming soon.')">Donate Now</button>
+  </section>
+
+  <div class="container" id="termsSection">
+    <h2>Terms and Conditions</h2>
+    <ul>
+      <li>This website is for educational purposes only.</li>
+      <li>Experiments should be done with adult supervision when needed.</li>
+      <li>We are not responsible for any harm or damage resulting from trying these experiments.</li>
+      <li>All content (text, images) is owned by Science Hub and may not be copied without permission.</li>
+      <li>Images used are either original or for demonstration only.</li>
+      <li>By continuing to use the website, you accept these terms.</li>
+    </ul>
+    <p>If you have any concerns or questions, feel free to contact us.</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Science Hub | <a onclick="toggleTerms()">Terms and Conditions</a>
+  </footer>
+
+  <script>
+    function navigateTo(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleTerms() {
+      const terms = document.getElementById('termsSection');
+      terms.style.display = terms.style.display === 'block' ? 'none' : 'block';
+      terms.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleDetails(index, btn) {
+      const details = document.getElementById(`details-${index}`);
+      if (details.style.display === "block") {
+        details.style.display = "none";
+        btn.textContent = "See More";
+      } else {
+        details.style.display = "block";
+        btn.textContent = "See Less";
+      }
+    }
+
+    const experiments = [
+      {
+        title: "Baking Soda and Vinegar Volcano",
+        image: "https://masandpas.com/wp-content/uploads/2019/09/explode-main.jpg",
+        materials: ["1 cup of baking soda", "1/2 cup of vinegar", "Plastic container", "Food coloring", "Tray"],
+        procedure: ["Place container on tray.", "Add baking soda.", "Add food coloring.", "Pour vinegar.", "Watch eruption."],
+        result: "The chemical reaction creates carbon dioxide gas, resulting in a fizzy eruption."
+      },
+      {
+        title: "Paper Airplane Flight Test",
+        image: "https://www.foldnfly.com/images/lounge/tape-measure.jpg",
+        materials: ["A4 paper", "Ruler", "Stopwatch", "Notebook"],
+        procedure: ["Fold paper airplanes.", "Throw with same force.", "Measure distance.", "Record time.", "Compare results."],
+        result: "Design affects how far and long the airplane flies."
+      },
+      {
+        title: "Static Electricity Balloon",
+        image: "https://www.snexplores.org/wp-content/uploads/2023/11/1030_SB_static_electricity_exp_feat.jpg",
+        materials: ["Balloon", "Wool cloth", "Paper bits"],
+        procedure: ["Inflate balloon.", "Rub on cloth.", "Bring near paper bits.", "Observe attraction."],
+        result: "Static electricity causes attraction between charged and neutral objects."
+      },
+      {
+        title: "Water Density Layers",
+        image: "https://thedadlab.com/storage/2022/06/8-layer-density-column-scaled.jpg",
+        materials: ["Water", "Salt", "Food coloring", "Clear container"],
+        procedure: ["Add salt to water.", "Color each mix.", "Layer slowly.", "Observe separation."],
+        result: "Denser saltwater stays at the bottom; less dense on top."
+      },
+      {
+        title: "Egg in Vinegar (Bouncing Egg)",
+        image: "https://learning.sciencemuseumgroup.org.uk/wp-content/uploads/2021/01/Bouncy-Egg-800x600-1.jpg",
+        materials: ["Raw egg", "Glass jar", "White vinegar"],
+        procedure: ["Place egg in jar.", "Add vinegar.", "Wait 24-48 hours.", "Rinse and observe."],
+        result: "Vinegar dissolves shell, leaving a soft, bouncy membrane."
+      },
+      {
+        title: "Oil and Water Experiment",
+        image: "https://stevespangler.com/wp-content/uploads/2014/01/oil-water-density-magic-03-1024x427.jpg",
+        materials: ["Glass", "Water", "Oil", "Food coloring"],
+        procedure: ["Fill glass with water.", "Add food coloring.", "Pour oil.", "Stir then observe."],
+        result: "Oil and water separate due to different densities and polarity."
+      },
+      {
+        title: "Floating Paper Clip",
+        image: "https://www.physics.colostate.edu/wp-content/uploads/sites/14/2021/01/400-scaled.jpg",
+        materials: ["Bowl of water", "Tissue", "Paper clip", "Toothpick"],
+        procedure: ["Place tissue on water.", "Place clip on tissue.", "Sink tissue.", "Clip floats."],
+        result: "Surface tension holds up the metal clip."
+      },
+      {
+        title: "Lava Lamp Experiment",
+        image: "https://150986912.v2.pressablecdn.com/wp-content/uploads/2020/11/diy-lava-lamp.jpg",
+        materials: ["Bottle", "Oil", "Water", "Food coloring", "Alka-Seltzer"],
+        procedure: ["Fill bottle with oil.", "Add water.", "Add food coloring.", "Drop Alka-Seltzer.", "Observe reaction."],
+        result: "Gas lifts water blobs creating a lava-lamp effect."
+      },
+      {
+        title: "Invisible Ink with Lemon Juice",
+        image: "https://cms-tc.pbskids.org/global/908-x-510-invisible-ink.jpg",
+        materials: ["Lemon juice", "Cotton swab", "Paper", "Lamp or iron"],
+        procedure: ["Dip swab in lemon juice.", "Write message.", "Let dry.", "Heat paper.", "Message appears."],
+        result: "Heat oxidizes lemon juice, making it visible."
+      },
+      {
+        title: "Plant Capillary Action",
+        image: "https://i0.wp.com/taminglittlemonsters.com/wp-content/uploads/2020/02/2-2.png?resize=900%2C600",
+        materials: ["White flowers", "Food coloring", "Water", "Vase"],
+        procedure: ["Add food coloring to water.", "Trim flower stems.", "Place flowers in vase.", "Observe color change."],
+        result: "Water moves up stem, changing petal colors via capillary action."
+      }
+    ];
+
+    const container = document.getElementById('experimentContainer');
+
+    experiments.forEach((exp, i) => {
+      const div = document.createElement('div');
+      div.className = 'experiment';
+
+      const materialsHTML = exp.materials.map(item => `<li>${item}</li>`).join('');
+      const procedureHTML = exp.procedure.map(step => `<li>${step}</li>`).join('');
+
+      div.innerHTML = `
+        <img src="${exp.image}" alt="${exp.title}">
+        <h2>${exp.title}</h2>
+        <button onclick="toggleDetails(${i}, this)">See More</button>
+        <div class="details" id="details-${i}">
+          <p><strong>Materials:</strong></p>
+          <ul>${materialsHTML}</ul>
+          <p><strong>Procedure:</strong></p>
+          <ol>${procedureHTML}</ol>
+          <p><strong>Result:</strong> ${exp.result}</p>
         </div>
-    </div>
-    <footer>
-        <p>&copy; Science Experiment  | Paul Markuss Bansing</p>
-    </footer>
+      `;
+      container.appendChild(div);
+    });
+  </script>
 </body>
 </html>
